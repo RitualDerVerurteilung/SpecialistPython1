@@ -36,6 +36,13 @@ n = 12
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+cost = float(input())
+n = int(input())
+schet = 1
+while n > 0:
+    print(schet, cost * schet, "рублей")
+    n -= 1
+    schet += 1
+
 ```
 
