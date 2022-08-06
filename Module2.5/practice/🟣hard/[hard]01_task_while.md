@@ -16,7 +16,25 @@
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+n = int(input())
+
+c1 = 0
+c2 = 1
+c3 = 1
+
+if n == 1:
+    print(c1)
+elif n == 2 or n == 3:
+    print(c2)
+else:
+    n -= 3
+    while n > 0:
+        c3 += c2
+        c2 += c1
+        c1 = c2 - c1
+        n -= 1
+    print(c3)
+
 ```
 
 ### Данные для самопроверки
