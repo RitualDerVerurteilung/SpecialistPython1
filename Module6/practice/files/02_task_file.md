@@ -17,14 +17,15 @@
 ### Решение задачи
 
 ```python
-# Задаем путь к файлу:
-path = "dir/limericks.txt"  # вместо dir подставь название папки с файлом.
-# Или удалите dir, если limericks.txt в той же папке, что и питоновский файл
+lst =[]
+with open('data/limericks.txt', 'r', encoding='UTF-8') as f:
+    for line in f:
+        line = line.replace('.', '')
+        lst.append(line)
 
-# Открываем файл на чтение
-f = open(path, "r")
-# В переменную line считываем строку за стройкой из файла(f)
-for line in f:
+with open('data/limericks_clean.txt.txt', 'w', encoding='UTF-8') as f:
+    for i in range(len(lst)):
+        f.write(lst[i])
     ...
 ```
 
