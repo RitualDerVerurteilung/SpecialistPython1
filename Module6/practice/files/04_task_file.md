@@ -22,7 +22,18 @@
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+staff_name = []
+with open('data/salaries.txt', 'r', encoding='UTF-8') as f:
+    f.readline()
+    for line in f:
+        line = line.split()
+        if int(line[-1]) > 60000:
+            staff_name.append(f'{line[0]} {line[1][0]}.{line[2][0]}.')
+
+with open('data/highly_paid.txt', 'w', encoding='UTF-8') as f:
+    for i in range(len(staff_name)):
+        f.write(staff_name[i] + '\n')
+
 ```
 
 ---
