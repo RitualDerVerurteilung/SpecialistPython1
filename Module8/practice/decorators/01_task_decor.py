@@ -7,3 +7,18 @@
 # *23*
 # ****
 # (кол-во звездочек зависит от длины возвращаемого значения)
+def decor(func):
+    def wrapper():
+        print((len(func()) + 2) * '*')
+        print(f'*{func()}*')
+        print((len(func()) + 2) * '*')
+
+    return wrapper
+
+
+@decor
+def privet():
+    return 'privet'
+
+
+privet()
