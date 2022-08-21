@@ -4,3 +4,24 @@
 # Алгоритм проверки на високосный год оформите в виде отдельной функции.
 #
 # Входная строка содержит два целых числа – номер месяца (возможно, неправильный) и номер года.
+def viskos(year) -> bool:
+    if (year % 4 == 0) and (year % 100 != 0) or (year % 400 == 0):
+        return True
+    else:
+        return False
+
+
+month_value = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+is_vveli = False
+while not is_vveli:
+    try:
+        month, year = map(int,input('Введите месяц и год через пробел:').split())
+        is_vveli = True
+    except ValueError as er:
+        print('Вы ввели неправильные двнные!')
+while month > 12:
+    month = int(input('Месяц не может быть больше 12!\nВведите месяц:'))
+if month == 2 and viskos(year) == True:
+    print(month_value[1] + 1)
+else:
+    print(month_value[month-1])
