@@ -5,3 +5,19 @@
 
 # При решении задачи требуется учесть формат входных данных.
 # Если входные данные некорректные, сообщить об этом.
+is_input = False
+while not is_input:
+    try:
+        a, b, c, d, e = map(int,input().split())
+        is_input = True
+    except TypeError:
+        print("Вы ввели некорректные данные. Введите 5 чисел через пробел")
+    except ValueError:
+        print("Вы ввели некорректные данные. Введите 5 чисел через пробел")
+
+min5 = a
+lst = [a, b ,c, d, e]
+for i in range(len(lst)):
+    if min5 > lst[i] > 0:
+        min5 = lst[i]
+print(min5)
