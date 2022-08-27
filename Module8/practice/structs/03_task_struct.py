@@ -4,3 +4,27 @@
 # 1. Количество элементов списка не превышающие 10
 # 2. Сумму всех положительных элементов списка
 # 3. Среднее арифметическое всех четных элементов
+# Дан список, заполненный произвольными целыми числами.
+# Примечание: для генерации списка используйте функцию.
+# Найдите:
+# 1. Количество элементов списка не превышающие 10
+# 2. Сумму всех положительных элементов списка
+# 3. Среднее арифметическое всех четных элементов
+
+from random import randint
+lst = [randint(-100, 100) for i in range(10)]
+print(lst)
+count_not_more_10 = 0
+summ_positive = 0
+crednee_arf = 0
+kolvo_in_cr = 0
+for el in lst:
+    if el < 10:
+        count_not_more_10 += 1
+    if el > 0:
+        summ_positive += el
+    if not el % 2:
+        crednee_arf += el
+        kolvo_in_cr += 1
+crednee_arf /= kolvo_in_cr
+print(crednee_arf, count_not_more_10, summ_positive)
