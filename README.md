@@ -63,3 +63,20 @@ https://forms.gle/bhuzJZUBm7Z7EaYUA
 <!--stackedit_data:
 eyJoaXN0b3J5IjpbNTQ5NTYzMzc1XX0=
 -->
+
+Задача про Васю:
+shifr = str(input())
+shifr = shifr.split()
+final_word = []
+max_letter = 0
+add_letter = None
+for el in shifr:
+    el = list(el)
+    for letter in el:
+        if el.count(letter) > max_letter:
+            max_letter = el.count(letter)
+            add_letter = letter
+    final_word.append(add_letter)
+    max_letter = 0
+for el in final_word:
+    print(el, end='')
