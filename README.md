@@ -1,5 +1,5 @@
 # Материалы по Python-1 (Base)
-
+https://forms.gle/bhuzJZUBm7Z7EaYUA
 ## Оглавление
 
 ### Модуль 1: Знакомство с python
